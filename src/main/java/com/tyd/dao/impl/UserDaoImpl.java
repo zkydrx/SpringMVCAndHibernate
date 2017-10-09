@@ -193,4 +193,28 @@ public class UserDaoImpl implements UserDao
         sessionFactory.close();
         return map;
     }
+
+    /**
+     * Checking the address.
+     *
+     * @param regex
+     * @return
+     */
+    public boolean checkAddress(String regex)
+    {
+        SessionFactory sessionFactory = FactoryUtil.getSessionFactory();
+        EntityManager entityManager = sessionFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        String s = "from UserEntity u where u.address =:_address";
+        javax.persistence.Query query = entityManager.createQuery(s);
+        query.setParameter("_address",regex);
+        List<UserEntity> resultList = query.getResultList();
+        entityManager.getTransaction().commit();
+        sessionFactory.close();
+        if(resultList.size() > 0)
+        {
+            return true;
+        }
+        return false;
+    }
 }

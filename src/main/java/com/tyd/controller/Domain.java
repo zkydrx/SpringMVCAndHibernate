@@ -136,4 +136,20 @@ public class Domain
     }
 
 
+    @Test
+    public void testCheckAddr()
+    {
+        boolean z = userService.checkAddr("z");
+
+        if(z)
+        {
+            System.out.println("The Address is right.");
+        }
+        else
+        {
+            System.out.println("The address isn't exist.");
+        }
+    }
+
+
 }

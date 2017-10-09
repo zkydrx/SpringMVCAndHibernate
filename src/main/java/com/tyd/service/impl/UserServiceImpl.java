@@ -89,5 +89,10 @@ public class UserServiceImpl implements UserService
         return man1;
     }
 
+    public boolean checkAddr(String regex)
+    {
+        boolean b = userDao.checkAddress(regex);
 
+        return b;
+    }
 }

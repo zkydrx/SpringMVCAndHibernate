@@ -83,4 +83,12 @@ public interface UserService
      * @return
      */
     List<UserPoJo> getMan(String man);
+
+
+    /**
+     * address checking.
+     * @param regex
+     * @return
+     */
+    boolean checkAddr(String regex);
 }

@@ -82,4 +82,11 @@ public interface UserDao
      * @return
      */
     List<UserPoJo> getMan(String man);
+
+    /**
+     * Checking the address.
+     * @param regex
+     * @return
+     */
+    boolean checkAddress(String regex);
 }
