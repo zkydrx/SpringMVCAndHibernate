@@ -111,4 +111,29 @@ public class Domain
 
     }
 
+
+    @Test
+    public void testLoginChecking()
+    {
+        boolean b = userService.loginCheck("z", "z");
+        if(b)
+        {
+            System.out.println("Login successful!");
+        }
+        else
+        {
+            System.out.println("The name or password not patch.");
+        }
+    }
+
+
+    @Test
+    public void testGetMan()
+    {
+        List<UserPoJo> man = userService.getMan("man");
+
+        System.out.println(man);
+    }
+
+
 }

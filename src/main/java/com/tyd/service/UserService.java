@@ -69,4 +69,18 @@ public interface UserService
      * @return
      */
     List<UserPoJo> findByAge(String age);
+    /**
+     * login checking.
+     * @param name
+     * @param password
+     * @return
+     */
+    boolean loginCheck(String name,String password);
+
+    /**
+     * get all sex of man.
+     * @param man
+     * @return
+     */
+    List<UserPoJo> getMan(String man);
 }

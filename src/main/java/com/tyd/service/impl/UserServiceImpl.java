@@ -5,7 +5,6 @@ import com.tyd.dao.impl.UserDaoImpl;
 import com.tyd.entity.UserEntity;
 import com.tyd.pojo.UserPoJo;
 import com.tyd.service.UserService;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -64,4 +63,31 @@ public class UserServiceImpl implements UserService
         List<UserPoJo> byAge = userDao.findByAge(age);
         return byAge;
     }
+
+    /**
+     * login checking.
+     *
+     * @param name
+     * @param password
+     * @return
+     */
+    public boolean loginCheck(String name, String password)
+    {
+        boolean b = userDao.loginCheck(name, password);
+        return b;
+    }
+
+    /**
+     * get all sex of man.
+     *
+     * @param man
+     * @return
+     */
+    public List<UserPoJo> getMan(String man)
+    {
+        List<UserPoJo> man1 = userDao.getMan(man);
+        return man1;
+    }
+
+
 }
