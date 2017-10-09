@@ -49,7 +49,7 @@ public class Domain
     @Test
     public void  testUpdate()
     {
-        UserPoJo userPoJo = new UserPoJo(3,"a","b","c","d","e");
+        UserPoJo userPoJo = new UserPoJo(3,"a20171009","b","c","d","e");
         UserEntity userEntity = new UserEntity();
         beanMapper.copy(userPoJo,userEntity);
         userService.updateObj(userEntity);
